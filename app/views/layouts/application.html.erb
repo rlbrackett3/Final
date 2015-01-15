@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflit</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+ <p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
+
+ <%if user_signed_in? %>
+  <%= link_to 'log-out', destroy_user_session_path, method: :delete %>
+<% end %>
+<%#<%= flash[:notice] if flash[:notice] %>
+<%#<%= flash[:alert] if flash[:alert] %>
+
+<%= yield %>
+
+</body>
+</html>

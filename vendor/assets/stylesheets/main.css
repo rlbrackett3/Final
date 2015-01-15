@@ -1,0 +1,213 @@
+body {
+  text-align: center; }
+
+.author {
+  width: 150px;
+  margin: 0 auto;
+  margin-left: 40px; }
+
+.author_list {
+  list-style: none;
+  padding-left: 0; }
+
+#myCarousel {
+  margin: 0 auto; }
+  #myCarousel .item {
+    margin: 0 auto;
+    width: 200px; }
+  #myCarousel .carousel-caption {
+    margin-top: 100px; }
+
+.bar_graph {
+  width: 400px; }
+
+#sign_up {
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  border: 3px solid black;
+  margin: 0 auto;
+  display: block;
+  margin-top: 0; }
+  #sign_up .sign_up {
+    text-align: center;
+    margin-top: 20px; }
+  #sign_up textarea {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    color: gray; }
+
+#log_in {
+  width: 300px;
+  height: 200px;
+  border: 3px solid black;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px; }
+  #log_in .log_in {
+    margin-top: 50px; }
+  #log_in .login {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px; }
+  #log_in textarea {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    color: gray;
+    margin-top: 30px; }
+
+.user {
+  width: 100px;
+  height: auto;
+  margin: 0 auto; }
+
+#new_profile {
+  border: 3px solid black;
+  height: 325px;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 10px; }
+  #new_profile .edit_profile {
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px; }
+  #new_profile textarea {
+    width: 200px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px; }
+
+#reviews {
+  border: 3px solid black;
+  height: 175px;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 10px; }
+  #reviews .edit_reviews {
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px; }
+  #reviews textarea {
+    width: 200px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px; }
+
+.submit_profile {
+  margin-top: 25px;
+  margin-bottom: 15px; }
+
+#user_reviews {
+  width: 300px;
+  margin-top: 10px;
+  border: 3px solid black;
+  margin: 0 auto; }
+  #user_reviews .user_reviews {
+    margin-bottom: 20px; }
+
+.profile_image {
+  width: 100px;
+  height: auto;
+  margin: 0 auto; }
+
+.fav_books {
+  border: 3px solid black;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-align: center; }
+  .fav_books ul {
+    list-style: none;
+    padding-left: 0; }
+
+.tree {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 250px;
+  height: 200px; }
+
+* {
+  box-sizing: border-box; }
+
+@media all and (min-width: 768px) {
+  #sign_up {
+    display: inline-block; }
+
+  #log_in {
+    display: inline-block;
+    margin-top: 0px;
+    vertical-align: top; }
+
+  #new_profile {
+    width: 400px; }
+
+  #reviews {
+    width: 400px;
+    margin-top: 10px; }
+
+  #user_reviews {
+    width: 400px;
+    margin-top: 350px;
+    border: 3px solid black;
+    display: inline-block;
+    float: left; }
+    #user_reviews .user_reviews {
+      margin-bottom: 20px; }
+
+  .profile_image {
+    display: block;
+    position: absolute;
+    margin-left: 70px;
+    width: 125px; }
+
+  .user_profile {
+    float: left;
+    margin-top: 100px;
+    position: absolute;
+    margin-left: 70px; }
+
+  .fav_books {
+    width: 400px;
+    float: left;
+    margin-top: 150px;
+    position: absolute; }
+
+  .tree {
+    display: inline-block;
+    width: 625px;
+    height: 500px; }
+
+  .author {
+    width: 150px;
+    margin: 0 auto;
+    float: left;
+    position: absolute;
+    display: block;
+    margin-left: 20px; }
+
+  .author_profile {
+    float: left;
+    margin-top: 150px;
+    margin-left: 60px;
+    position: absolute; }
+
+  .author_list {
+    float: left;
+    margin-top: 200px;
+    margin-left: 45px; }
+
+  #myCarousel {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 400px; }
+    #myCarousel .item {
+      margin: 0 auto; }
+    #myCarousel .book {
+      height: 300px;
+      width: 400px; } }
