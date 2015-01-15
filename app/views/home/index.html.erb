@@ -1,47 +1,73 @@
+<div class="logo">
+	<!-- <a href="index.html"><img class="logo" src="stylesheets/images/leaf.png"></a> this should be converted to rails helpers -->
+	<%= link_to(image_tag("leaf.png"), root_path) %>
+	<h1 class="tagline">Leaflit tagline</h1>
+</div>
 
+<!--
+<div id="sign_up">
+	<p class="sign_up">Sign up for an account to get started with Leaflit!</p>
+	<textarea name="textarea" rows="1" cols="20">First Name</textarea> I have no idea why you have atextarea, but ok 
+	<textarea name="textarea" rows="1" cols="20">Last Name</textarea>
+	<textarea name="textarea" rows="1" cols="20">Email Address</textarea>
+	<a href="build_profile.html"><button class="submit">Submit</button></a>
+</div>
+-->
+<div id="sign_up">
+  <p class="sign_up">Sign up for an account to get started with Leaflit!</p>
+  
+  <%= form_for(@user, as: @user, url: registration_path(@user)) do |f| %>
+    <!-- since the other markup uses text areas these will not style correctly, that is strange but you could change these to text-areas if you want -->
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :password %>
+      <% if @validatable %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+  
+   <br>
+  
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit "Sign up", class: "submit" %>
+    </div>
+  <% end %>
+</div>
 
-<h2>Leaflit</h2>
-
-<%= form_for(@user, as: @user, url: registration_path(@user)) do |f| %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
- <br>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= form_for(@user, as: @user, url: session_path(@user)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+<!--
+<div id="log_in">
+	<p class="log_in">Log in to your Leaflit account!</p>
+	<textarea name="textarea" rows="1" cols="20">Email Address</textarea>
+	<a href="profile.html"><button class="login">Log In</button></a>
+</div>
+-->
+<div id="log_in">
+  <p class="log_in">Log in to your Leaflit account!</p>
+  <%= form_for(@user, as: @user, url: session_path(@user)) do |f| %>
+    <!-- since the other markup uses text areas these will not style correctly, that is strange but you could change these to text-areas if you want -->
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+  
+  
+    <div class="actions">
+      <%= f.submit "Log in", class: "login" %>
+    </div>
+  <% end %>
+</div>
